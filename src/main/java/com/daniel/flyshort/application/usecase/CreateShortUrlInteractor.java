@@ -1,7 +1,9 @@
 package com.daniel.flyshort.application.usecase;
 
+import com.daniel.flyshort.application.validator.LinkValidator;
 import com.daniel.flyshort.core.entities.ShortUrl;
 import com.daniel.flyshort.core.entities.Slug;
+import com.daniel.flyshort.core.exceptions.InvalidUrlException;
 import com.daniel.flyshort.core.repository.FlyShortRepository;
 import com.daniel.flyshort.core.strategy.SlugGenerator;
 
@@ -17,6 +19,10 @@ public class CreateShortUrlInteractor implements UseCase<String, ShortUrl> {
 
     @Override
     public ShortUrl execute(String originalUrl) {
+
+        if (!LinkValidator.validate(originalUrl)) {
+            throw new InvalidUrlException("Invalid URL");
+        }
         
         Slug slug = slugGenerator.generate();
 
