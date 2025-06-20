@@ -2,9 +2,10 @@ package com.daniel.flyshort.application.usecase;
 
 import java.util.Optional;
 
+import com.daniel.flyshort.core.entities.ShortUrl;
 import com.daniel.flyshort.core.repository.FlyShortRepository;
 
-public class GetOriginalUrlInteractor implements UseCase<String, Optional<String>> {
+public class GetOriginalUrlInteractor implements UseCase<String, Optional<ShortUrl>> {
 
     private final FlyShortRepository repository;
 
@@ -13,8 +14,8 @@ public class GetOriginalUrlInteractor implements UseCase<String, Optional<String
     }
 
     @Override
-    public Optional<String> execute(String slug) {
-        return repository.findBySlug(slug).map(shorturl -> shorturl.getOriginal());
+    public Optional<ShortUrl> execute(String slug) {
+        return repository.findBySlug(slug);
     }
     
 }
