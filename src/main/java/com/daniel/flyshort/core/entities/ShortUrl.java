@@ -12,6 +12,8 @@ public class ShortUrl {
         this.original = original;
     }
 
-    
+    public ShortUrl(Slug slug, String original) {
+        this(null, slug, original);
+    }
     
 }
