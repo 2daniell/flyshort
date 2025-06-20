@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: flyshort-postgres
+    environment:
+      POSTGRES_USER: flyshortuser
+      POSTGRES_PASSWORD: flyshortpass
+      POSTGRES_DB: flyshortdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  flyshort-api:
+    image: flyshort-api:latest
+    build: .
+    container_name: flyshort-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/flyshortdb
+      SPRING_DATASOURCE_USERNAME: flyshortuser
+      SPRING_DATASOURCE_PASSWORD: flyshortpass
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
