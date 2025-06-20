@@ -1,6 +1,5 @@
-package com.daniel.flyshort.application.interactor;
+package com.daniel.flyshort.application.usecase;
 
-import com.daniel.flyshort.application.usecase.UseCase;
 import com.daniel.flyshort.core.entities.ShortUrl;
 import com.daniel.flyshort.core.entities.Slug;
 import com.daniel.flyshort.core.repository.FlyShortRepository;
