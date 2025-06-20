@@ -9,7 +9,7 @@ import com.daniel.flyshort.core.repository.FlyShortRepository;
 import com.daniel.flyshort.core.strategy.SlugGenerator;
 
 @Configuration
-public class SpringConfig {
+public class FlyShortConfig {
 
     @Bean
     public CreateShortUrlInteractor createShortUrlInteractor(SlugGenerator generator, FlyShortRepository repository) {
