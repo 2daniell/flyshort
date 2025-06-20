@@ -15,5 +15,9 @@ public class ShortUrl {
     public ShortUrl(Slug slug, String original) {
         this(null, slug, original);
     }
-    
+
+    public String getOriginal() {
+        return original;
+    }
+
 }
