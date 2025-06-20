@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: flyshort
+server:
+  port: 8080
