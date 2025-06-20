@@ -31,5 +31,10 @@ public class FlyShortRepositoryImpl implements FlyShortRepository {
         ShortUrlModel model = mapper.toModel(shortUrl);
         return mapper.toDomain(repository.save(model));
     }
+
+    @Override
+    public Long count() {
+        return repository.count();
+    }
     
 }

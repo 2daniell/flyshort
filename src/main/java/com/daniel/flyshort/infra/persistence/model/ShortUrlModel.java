@@ -29,13 +29,13 @@ public class ShortUrlModel {
     private String original;
     
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
     public ShortUrlModel() {}
     public ShortUrlModel(String slug, String original, LocalDateTime createdAt) {
         this.slug = slug;
         this.original = original;
-        this.createAt = createdAt;
+        this.createdAt = createdAt;
     }
 
     public String getOriginal() {
@@ -51,7 +51,7 @@ public class ShortUrlModel {
     }
 
     public LocalDateTime getCreateAt() {
-        return createAt;
+        return createdAt;
     }
 
 }

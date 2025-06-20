@@ -8,6 +8,6 @@ public interface FlyShortRepository {
     
     Optional<ShortUrl> findBySlug(String slug);
     ShortUrl save(ShortUrl shortUrl);
-
+    Long count();
 
 }
