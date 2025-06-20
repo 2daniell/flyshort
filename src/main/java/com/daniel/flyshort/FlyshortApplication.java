@@ -1,4 +1,4 @@
-package com.daniel.flyshort.flyshort;
+package com.daniel.flyshort;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

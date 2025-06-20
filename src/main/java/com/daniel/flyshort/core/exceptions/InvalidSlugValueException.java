@@ -1,4 +1,4 @@
-package com.daniel.flyshort.flyshort.core.exceptions;
+package com.daniel.flyshort.core.exceptions;
 
 public class InvalidSlugValueException extends FlyShortException {
 

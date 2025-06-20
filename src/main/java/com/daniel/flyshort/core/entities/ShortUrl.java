@@ -1,4 +1,4 @@
-package com.daniel.flyshort.flyshort.core.entities;
+package com.daniel.flyshort.core.entities;
 
 public class ShortUrl {
 

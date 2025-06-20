@@ -1,6 +1,6 @@
-package com.daniel.flyshort.flyshort.core.entities;
+package com.daniel.flyshort.core.entities;
 
-import com.daniel.flyshort.flyshort.core.exceptions.InvalidSlugValueException;
+import com.daniel.flyshort.core.exceptions.InvalidSlugValueException;
 
 public class Slug {
     
